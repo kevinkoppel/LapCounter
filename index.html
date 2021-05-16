@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic Web Page</title>
+        <link rel="stylesheet" href="styles.css">
+        <script type = "text/javascript" src="counter.js"></script> 
+    </head>
+    
+    <div class="speedDropdown">
+        <h3>Kiirus:</h3>
+        <select id="speed">
+            <option value="7.5">Aeglane (27 km/h)</option>
+            <option value="8.33333">Kiire (30 km/h)</option>
+            <option value="8.88888">Pro (32 km/h)</option>
+          </select>
+    </div>
+    <div class="lapDropdown">
+        <h3>Ringide arv:</h3>
+        <select id="totalLaps">
+            <option value="3">3 Ringi</option>
+            <option value="4">4 Ringi</option>
+            <option value="5">5 Ringi</option>
+          </select>
+
+    </div>
+
+    <div class="createWatches">
+        <input id="create_watches_btn" type = "button" onclick = "CreateWatches()" value = "Alusta päeva">
+    </div>
+    
+
+    <div class="wrapper">
+        <div class="box a" id="box_0" onclick = "StartClock(1)">
+            
+            <label class="nr">1</label>
+            <label id="lapsLabel1">0.0</label>
+          
+            <button onclick="ResetClock(1)" id="close-image"><img src="https://png2.cleanpng.com/sh/84a4d201cdcc30eee732e4abf355666d/L0KzQYm3UsA0N5Z4j5H0aYP2gLBuTgJme5Z5RdRAdITyfn7wgB9vNaNqiAZqcoSwgLBuTfZzbZYyfNHCbnzycbW0VfE4PWk9UNYDZXLlQoq1Vsg5QWI3Uac6NUG6Roa5UcA6PWk5TpD5bne=/kisspng-reset-button-icon-restart-png-free-download-5a75888d8ebb29.6889129515176521095846.png"></button>
+           
+
+        </div>
+        <div class="box a" id="box_1" onclick = "StartClock(2)">
+            
+            <label class="nr">2</label>
+            <label id="lapsLabel2">0.0</label>
+          
+            <button onclick="ResetClock(2)" id="close-image"><img src="https://png2.cleanpng.com/sh/84a4d201cdcc30eee732e4abf355666d/L0KzQYm3UsA0N5Z4j5H0aYP2gLBuTgJme5Z5RdRAdITyfn7wgB9vNaNqiAZqcoSwgLBuTfZzbZYyfNHCbnzycbW0VfE4PWk9UNYDZXLlQoq1Vsg5QWI3Uac6NUG6Roa5UcA6PWk5TpD5bne=/kisspng-reset-button-icon-restart-png-free-download-5a75888d8ebb29.6889129515176521095846.png"></button>
+           
+
+        </div>
+        <div class="box c" id="box_2" onclick = "StartClock(3)">
+            
+            <label class="nr">3</label>
+            <label id="lapsLabel3">0.0</label>
+          
+            <button onclick="ResetClock(3)" id="close-image"><img src="https://png2.cleanpng.com/sh/84a4d201cdcc30eee732e4abf355666d/L0KzQYm3UsA0N5Z4j5H0aYP2gLBuTgJme5Z5RdRAdITyfn7wgB9vNaNqiAZqcoSwgLBuTfZzbZYyfNHCbnzycbW0VfE4PWk9UNYDZXLlQoq1Vsg5QWI3Uac6NUG6Roa5UcA6PWk5TpD5bne=/kisspng-reset-button-icon-restart-png-free-download-5a75888d8ebb29.6889129515176521095846.png"></button>
+           
+
+        </div>
+        <div class="box d" id="box_3" onclick = "StartClock(4)">
+            
+            <label class="nr">4</label>
+            <label id="lapsLabel4">0.0</label>
+          
+            <button onclick="ResetClock(4)" id="close-image"><img src="https://png2.cleanpng.com/sh/84a4d201cdcc30eee732e4abf355666d/L0KzQYm3UsA0N5Z4j5H0aYP2gLBuTgJme5Z5RdRAdITyfn7wgB9vNaNqiAZqcoSwgLBuTfZzbZYyfNHCbnzycbW0VfE4PWk9UNYDZXLlQoq1Vsg5QWI3Uac6NUG6Roa5UcA6PWk5TpD5bne=/kisspng-reset-button-icon-restart-png-free-download-5a75888d8ebb29.6889129515176521095846.png"></button>
+           
+
+        </div>
+        <div class="box e" id="box_4" onclick = "StartClock(5)">
+            
+            <label class="nr">5</label>
+            <label id="lapsLabel5">0.0</label>
+          
+            <button onclick="ResetClock(5)" id="close-image"><img src="https://png2.cleanpng.com/sh/84a4d201cdcc30eee732e4abf355666d/L0KzQYm3UsA0N5Z4j5H0aYP2gLBuTgJme5Z5RdRAdITyfn7wgB9vNaNqiAZqcoSwgLBuTfZzbZYyfNHCbnzycbW0VfE4PWk9UNYDZXLlQoq1Vsg5QWI3Uac6NUG6Roa5UcA6PWk5TpD5bne=/kisspng-reset-button-icon-restart-png-free-download-5a75888d8ebb29.6889129515176521095846.png"></button>
+           
+
+        </div>
+        <div class="box f" id="box_5" onclick = "StartClock(6)">
+            
+            <label class="nr">6</label>
+            <label id="lapsLabel6">0.0</label>
+          
+            <button onclick="ResetClock(6)" id="close-image"><img src="https://png2.cleanpng.com/sh/84a4d201cdcc30eee732e4abf355666d/L0KzQYm3UsA0N5Z4j5H0aYP2gLBuTgJme5Z5RdRAdITyfn7wgB9vNaNqiAZqcoSwgLBuTfZzbZYyfNHCbnzycbW0VfE4PWk9UNYDZXLlQoq1Vsg5QWI3Uac6NUG6Roa5UcA6PWk5TpD5bne=/kisspng-reset-button-icon-restart-png-free-download-5a75888d8ebb29.6889129515176521095846.png"></button>
+           
+
+        </div>
+        <div class="box g" id="box_6" onclick = "StartClock(7)">
+            
+            <label class="nr">7</label>
+            <label id="lapsLabel7">0.0</label>
+          
+            <button onclick="ResetClock(7)" id="close-image"><img src="https://png2.cleanpng.com/sh/84a4d201cdcc30eee732e4abf355666d/L0KzQYm3UsA0N5Z4j5H0aYP2gLBuTgJme5Z5RdRAdITyfn7wgB9vNaNqiAZqcoSwgLBuTfZzbZYyfNHCbnzycbW0VfE4PWk9UNYDZXLlQoq1Vsg5QWI3Uac6NUG6Roa5UcA6PWk5TpD5bne=/kisspng-reset-button-icon-restart-png-free-download-5a75888d8ebb29.6889129515176521095846.png"></button>
+           
+
+        </div>
+        <div class="box h" id="box_7" onclick = "StartClock(8)">
+            
+            <label class="nr">8</label>
+            <label id="lapsLabel8">0.0</label>
+          
+            <button onclick="ResetClock(8)" id="close-image"><img src="https://png2.cleanpng.com/sh/84a4d201cdcc30eee732e4abf355666d/L0KzQYm3UsA0N5Z4j5H0aYP2gLBuTgJme5Z5RdRAdITyfn7wgB9vNaNqiAZqcoSwgLBuTfZzbZYyfNHCbnzycbW0VfE4PWk9UNYDZXLlQoq1Vsg5QWI3Uac6NUG6Roa5UcA6PWk5TpD5bne=/kisspng-reset-button-icon-restart-png-free-download-5a75888d8ebb29.6889129515176521095846.png"></button>
+           
+
+        </div>
+        
+      </div>
+
+      <div>
+       
+    </div>
+
+
+
+    
+</html>
+
+
+  
